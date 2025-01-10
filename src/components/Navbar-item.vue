@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #nav-bar {
     border-bottom: 1px solid #ddd;
     height: 75px;
