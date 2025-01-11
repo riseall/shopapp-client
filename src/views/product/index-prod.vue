@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { products } from '../../data-seed'
+import axios from 'axios'
 import ProductItem from '../../components/ProductItem'
 export default {
     components: {
@@ -17,8 +17,12 @@ export default {
     },
     data() {
         return {
-            products
+            products: []
         }
+    },
+    async created() {
+        const result = await axios.get('http://localhost:8000/api/products')
+        this.products = result.data
     }
 }
 </script>
